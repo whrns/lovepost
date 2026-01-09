@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주)케이참신렌트카 | 프리미엄 공항 의전 서비스</title>
-    <meta name="description" content="인천공항 픽업, 샌딩, VIP 의전 전문. 최신형 스타리아/카니발 하이리무진으로 모십니다.">
+    <meta name="description" content="인천공항 픽업, 샌딩, VIP 의전 전문. 최신형 스타리아, 카니발 하이리무진, 쏠라티 보유.">
     
-    <!-- Google Fonts (Serif for Luxury, Sans for Readability) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
         .bg-gold { background-color: #d4af37; }
         .border-gold { border-color: #d4af37; }
 
-        /* 구글 번역 숨김 처리 (커스텀 버튼만 노출) */
+        /* 구글 번역 숨김 처리 */
         .goog-te-banner-frame.skiptranslate { display: none !important; } 
         body { top: 0px !important; } 
         #google_translate_element { display: none; }
@@ -45,7 +45,7 @@
         }
         .lang-btn:hover img { transform: scale(1.2); }
 
-        /* 차량 주행 애니메이션 효과 */
+        /* 차량 주행 애니메이션 */
         .car-container {
             animation: carBounce 2s infinite ease-in-out;
         }
@@ -68,7 +68,7 @@
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
         
-        /* Date/Time 아이콘 색상 변경 (브라우저 기본 대응) */
+        /* Date/Time 아이콘 색상 변경 */
         ::-webkit-calendar-picker-indicator {
             filter: invert(1);
             cursor: pointer;
@@ -102,6 +102,7 @@
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="#about" class="text-sm font-medium text-gray-300 hover:text-gold transition tracking-wide">서비스 소개</a>
+                <a href="#fleet" class="text-sm font-medium text-gray-300 hover:text-gold transition tracking-wide">보유 차량</a>
                 <a href="#reservation" class="text-sm font-bold text-gold hover:text-white transition tracking-wide border-b border-transparent hover:border-gold pb-1">예약 문의</a>
                 
                 <!-- Language Flags -->
@@ -120,7 +121,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-[#0f172a] border-t border-white/10 absolute w-full">
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0f172a] border-t border-white/10 absolute w-full z-40">
             <div class="p-6 space-y-4 text-center">
                 <div class="flex justify-center gap-6 mb-6">
                     <button onclick="changeLanguage('ko')" class="lang-btn"><img src="https://flagcdn.com/kr.svg"></button>
@@ -129,37 +130,32 @@
                     <button onclick="changeLanguage('zh-CN')" class="lang-btn"><img src="https://flagcdn.com/cn.svg"></button>
                 </div>
                 <a href="#about" class="block text-gray-300 hover:text-gold">서비스 소개</a>
+                <a href="#fleet" class="block text-gray-300 hover:text-gold">보유 차량 안내</a>
                 <a href="#reservation" class="block text-gold font-bold text-lg">예약 문의하기</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (Video Background + Staria Effect) -->
+    <!-- Hero Section -->
     <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        <!-- 1. 도로/공항 배경 비디오 (야간 주행 느낌) -->
+        <!-- 배경 비디오 -->
         <div class="absolute inset-0 w-full h-full">
-            <!-- Pexels 무료 스톡 비디오: 고속도로 야경 -->
-            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-50">
                 <source src="https://videos.pexels.com/video-files/3023275/3023275-hd_1920_1080_24fps.mp4" type="video/mp4">
             </video>
-            <!-- 어두운 오버레이 -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent"></div>
         </div>
 
-        <!-- 2. 차량 이미지 (스타리아 느낌의 실루엣 또는 이미지) -->
-        <!-- *참고: 실제 스타리아 누끼 이미지가 있다면 아래 src를 교체하세요. -->
+        <!-- 차량 움직임 효과 -->
         <div class="absolute bottom-0 z-10 w-full flex justify-center pointer-events-none">
-             <!-- 차량이 달리는 듯한 상하 반동 애니메이션 적용 -->
             <div class="car-container relative w-[80%] max-w-[600px] md:max-w-[800px]">
-                <!-- 차량 하단 그림자 -->
                 <div class="absolute -bottom-4 left-[10%] w-[80%] h-8 bg-black/80 blur-xl rounded-full"></div>
-                <!-- 차량 이미지 (현대 스타리아 예시 이미지 URL 사용) -->
+                <!-- 스타리아 느낌의 차량 이미지 -->
                 <img src="https://pngimg.com/d/mercedes_PNG80190.png" alt="Premium Van" class="w-full object-contain relative z-10 drop-shadow-2xl opacity-90">
-                <!-- *주석: 위 이미지는 예시(벤츠 밴)입니다. 실제 스타리아 PNG 파일 URL이 있다면 교체하시면 더 완벽합니다. -->
             </div>
         </div>
 
-        <!-- 3. 텍스트 콘텐츠 -->
+        <!-- 텍스트 -->
         <div class="relative z-20 text-center px-4 -mt-32 md:-mt-48">
             <span class="inline-block py-1 px-4 rounded-full border border-gold/50 text-gold text-xs md:text-sm font-serif tracking-widest mb-6 backdrop-blur-sm animate-fade-in">
                 PREMIUM AIRPORT LIMOUSINE
@@ -176,60 +172,123 @@
                 <a href="#reservation" class="bg-gold hover:bg-yellow-600 text-black px-10 py-4 rounded-sm font-bold transition shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                     예약 문의하기
                 </a>
-                <a href="tel:01054904740" class="border border-white text-white hover:bg-white hover:text-black px-10 py-4 rounded-sm font-bold transition backdrop-blur-sm">
-                    전화 상담 010-5490-4740
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Services (Glassmorphism) -->
+    <!-- Services Section -->
     <section id="about" class="py-24 relative bg-[#0f172a]">
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Our Services</h2>
-                <div class="w-24 h-1 bg-gold mx-auto"></div>
+                <div class="w-24 h-1 bg-gold mx-auto mb-4"></div>
+                <p class="text-gray-400 font-light">최상의 서비스로 편안한 이동을 약속드립니다.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-xl hover:border-gold/50 transition duration-500 group">
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-xl hover:border-gold/50 transition duration-500 group text-center">
                     <div class="text-5xl mb-6 group-hover:scale-110 transition duration-500">✈️</div>
                     <h3 class="text-xl font-bold text-white mb-4">공항 픽업 & 샌딩</h3>
-                    <p class="text-gray-400 leading-relaxed font-light">
-                        집 앞에서 공항 게이트까지, 공항에서 목적지까지.<br>
-                        무거운 짐은 기사님께 맡기시고 편안히 이동하세요.
+                    <p class="text-gray-400 leading-relaxed font-light text-sm">
+                        집 앞에서 공항 게이트까지, 공항에서 목적지까지.<br>무거운 짐은 기사님께 맡기세요.
                     </p>
                 </div>
-                <!-- Service 2 -->
-                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-xl hover:border-gold/50 transition duration-500 group">
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-xl hover:border-gold/50 transition duration-500 group text-center">
                     <div class="text-5xl mb-6 group-hover:scale-110 transition duration-500">🏆</div>
                     <h3 class="text-xl font-bold text-white mb-4">VIP 의전 / 골프</h3>
-                    <p class="text-gray-400 leading-relaxed font-light">
-                        중요한 비즈니스 파트너 영접 및 골프 투어.<br>
-                        품격 있는 차량과 매너 있는 기사가 수행합니다.
+                    <p class="text-gray-400 leading-relaxed font-light text-sm">
+                        비즈니스 파트너 영접 및 골프 투어.<br>품격 있는 차량과 매너 있는 기사 수행.
                     </p>
                 </div>
-                <!-- Service 3 -->
-                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-xl hover:border-gold/50 transition duration-500 group">
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-xl hover:border-gold/50 transition duration-500 group text-center">
                     <div class="text-5xl mb-6 group-hover:scale-110 transition duration-500">🛡️</div>
                     <h3 class="text-xl font-bold text-white mb-4">안전 & 방역</h3>
-                    <p class="text-gray-400 leading-relaxed font-light">
-                        전 차량 금연, 정기적인 스팀 세차 및 방역.<br>
-                        철저한 차량 관리로 최상의 컨디션을 유지합니다.
+                    <p class="text-gray-400 leading-relaxed font-light text-sm">
+                        전 차량 금연, 정기적인 스팀 세차 및 방역.<br>철저한 차량 관리로 최상의 컨디션 유지.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reservation Form (Premium Dark) -->
+    <!-- [New] Fleet Information Section -->
+    <section id="fleet" class="py-24 bg-[#141b2d]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase mb-2 block">Our Fleet</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">보유 차량 안내</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-4"></div>
+                <p class="text-gray-400 font-light">고객님의 인원과 용도에 맞는 최신형 프리미엄 차량을 선택하세요.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Vehicle 1: Staria -->
+                <div class="group bg-[#0f172a] rounded-xl overflow-hidden border border-white/10 hover:border-gold transition duration-300 shadow-xl">
+                    <div class="h-64 overflow-hidden bg-gray-800 relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hyundai_Staria_US4_Creamy_White_%281%29.jpg/800px-Hyundai_Staria_US4_Creamy_White_%281%29.jpg" 
+                             alt="Hyundai Staria" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-8 relative">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1">STARIA</h3>
+                        <p class="text-gold text-sm font-bold mb-4 uppercase">Hyundai Staria Lounge</p>
+                        <ul class="text-gray-400 text-sm space-y-2 font-light">
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 7인승 / 9인승 리무진 시트</li>
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 넉넉한 트렁크 (골프백 4개+)</li>
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 가족 여행 및 소규모 의전 추천</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2: Carnival -->
+                <div class="group bg-[#0f172a] rounded-xl overflow-hidden border border-white/10 hover:border-gold transition duration-300 shadow-xl">
+                    <div class="h-64 overflow-hidden bg-gray-800 relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kia_Carnival_KA4_Astra_Blue_%282%29.jpg/800px-Kia_Carnival_KA4_Astra_Blue_%282%29.jpg" 
+                             alt="Kia Carnival" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-8 relative">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1">CARNIVAL</h3>
+                        <p class="text-gold text-sm font-bold mb-4 uppercase">Kia Carnival High Limousine</p>
+                        <ul class="text-gray-400 text-sm space-y-2 font-light">
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 7인승 / 9인승 하이리무진</li>
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> VIP 의전용 최고급 좌석</li>
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 장거리 이동에 최적화된 편안함</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3: Solati -->
+                <div class="group bg-[#0f172a] rounded-xl overflow-hidden border border-white/10 hover:border-gold transition duration-300 shadow-xl">
+                    <div class="h-64 overflow-hidden bg-gray-800 relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hyundai_H350.jpg/800px-Hyundai_H350.jpg" 
+                             alt="Hyundai Solati" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-8 relative">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1">SOLATI</h3>
+                        <p class="text-gold text-sm font-bold mb-4 uppercase">Hyundai Solati Minibus</p>
+                        <ul class="text-gray-400 text-sm space-y-2 font-light">
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 15인승 미니버스</li>
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 높은 층고와 넓은 실내 공간</li>
+                            <li class="flex items-center"><span class="text-gold mr-2">✓</span> 단체 워크샵, 골프 투어 추천</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Form -->
     <section id="reservation" class="py-24 bg-gradient-to-b from-[#0f172a] to-black relative">
         <div class="container mx-auto px-4 max-w-4xl relative z-10">
             <div class="text-center mb-12">
                 <span class="text-gold text-sm font-bold tracking-widest uppercase mb-2 block">Reservation</span>
                 <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">예약 및 견적 문의</h2>
-                <p class="text-gray-400 font-light">아래 내용을 작성해 주시면 이메일 앱이 실행되며<br>자동으로 양식이 완성됩니다.</p>
+                <p class="text-gray-400 font-light">아래 양식을 작성하시면 이메일로 자동 연결됩니다.</p>
             </div>
 
             <div class="bg-[#1a2035] p-8 md:p-12 rounded-2xl shadow-2xl border border-white/5">
@@ -252,22 +311,25 @@
                         </div>
                         <div class="md:col-span-2">
                             <label class="block text-xs text-gray-400 mb-2 uppercase tracking-wider">도착지 (목적지)</label>
-                            <input type="text" id="dropoff" placeholder="예: 인천공항 제1터미널 / 호텔 이름" required class="w-full input-premium px-4 py-4 rounded-lg placeholder-gray-600">
+                            <input type="text" id="dropoff" placeholder="예: 인천공항 제1터미널" required class="w-full input-premium px-4 py-4 rounded-lg placeholder-gray-600">
                         </div>
 
-                        <!-- 인원/짐 -->
+                        <!-- 차량 선택 및 인원 -->
                         <div>
-                            <label class="block text-xs text-gray-400 mb-2 uppercase tracking-wider">탑승 인원</label>
-                            <select id="passengers" class="w-full input-premium px-4 py-4 rounded-lg">
-                                <option value="1명" class="text-black">1명</option>
-                                <option value="2명" class="text-black">2명</option>
-                                <option value="3명" class="text-black">3명</option>
-                                <option value="4명" class="text-black">4명</option>
-                                <option value="5명 이상" class="text-black">5명 이상 (대형밴)</option>
+                            <label class="block text-xs text-gray-400 mb-2 uppercase tracking-wider">희망 차량</label>
+                            <select id="vehicle" class="w-full input-premium px-4 py-4 rounded-lg">
+                                <option value="미정(추천받음)" class="text-black">차량 추천 받음</option>
+                                <option value="스타리아" class="text-black">스타리아</option>
+                                <option value="카니발" class="text-black">카니발 하이리무진</option>
+                                <option value="쏠라티" class="text-black">쏠라티 (15인승)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs text-gray-400 mb-2 uppercase tracking-wider">짐 갯수 (캐리어 기준)</label>
+                            <label class="block text-xs text-gray-400 mb-2 uppercase tracking-wider">탑승 인원</label>
+                            <input type="number" id="passengers" min="1" placeholder="1" required class="w-full input-premium px-4 py-4 rounded-lg">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-xs text-gray-400 mb-2 uppercase tracking-wider">짐 갯수 (캐리어)</label>
                             <input type="number" id="luggage" min="0" placeholder="0" class="w-full input-premium px-4 py-4 rounded-lg">
                         </div>
 
@@ -303,23 +365,18 @@
         </div>
     </footer>
 
-    <!-- Floating Action Buttons (Fixed Bottom Right) -->
+    <!-- Floating Action Buttons -->
     <div class="fixed bottom-8 right-6 z-50 flex flex-col gap-4 items-end">
-        
-        <!-- 1. KakaoTalk Chat -->
         <a href="http://pf.kakao.com/_sdUgn/chat" target="_blank" class="group flex items-center gap-2">
-            <span class="bg-white text-black text-xs font-bold py-1 px-3 rounded-md shadow opacity-0 group-hover:opacity-100 transition duration-300 transform translate-x-2 group-hover:translate-x-0 pointer-events-none">
+            <span class="bg-white text-black text-xs font-bold py-1 px-3 rounded-md shadow opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
                 카톡 상담
             </span>
             <div class="bg-[#FEE500] hover:bg-[#FADB00] p-3 rounded-full shadow-lg shadow-black/30 transition transform hover:scale-110 w-14 h-14 flex items-center justify-center">
-                <!-- 카카오 아이콘 -->
                 <svg viewBox="0 0 24 24" fill="#3c1e1e" class="w-8 h-8">
                     <path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.707 4.8 4.27 6.054-.188.702-.682 2.545-.78 2.94-.123.49.178.483.376.351.155-.103 2.466-1.675 3.464-2.353.54.08 1.1.123 1.67.123 4.97 0 9-3.186 9-7.115C21 6.185 16.97 3 12 3z"/>
                 </svg>
             </div>
         </a>
-
-        <!-- 2. Scroll Top Button -->
         <button onclick="scrollToTop()" class="bg-[#1a2035] hover:bg-gold border border-white/20 hover:border-gold text-white hover:text-black p-3 rounded-full shadow-lg transition transform hover:scale-110 w-12 h-12 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -329,7 +386,6 @@
 
     <!-- Script Logic -->
     <script>
-        // 모바일 메뉴 토글
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -343,7 +399,6 @@
             });
         });
 
-        // 언어 변경 함수
         function changeLanguage(langCode) {
             const select = document.querySelector('.goog-te-combo');
             if (select) {
@@ -352,7 +407,6 @@
             }
         }
 
-        // 이메일 전송 (Mailto)
         function sendEmail(e) {
             e.preventDefault();
             
@@ -360,27 +414,28 @@
             const time = document.getElementById('time').value;
             const pickup = document.getElementById('pickup').value;
             const dropoff = document.getElementById('dropoff').value;
+            const vehicle = document.getElementById('vehicle').value;
             const passengers = document.getElementById('passengers').value;
             const luggage = document.getElementById('luggage').value;
             const contact = document.getElementById('contact').value;
 
             const subject = encodeURIComponent(`[(주)케이참신렌트카] 예약 문의 - ${contact}`);
             const body = encodeURIComponent(
-                `안녕하세요, 아래 일정으로 예약을 문의합니다.\n\n` +
+                `안녕하세요, 예약 문의 드립니다.\n\n` +
                 `📅 날짜: ${date}\n` +
                 `🕒 시간: ${time}\n` +
                 `🚩 출발지: ${pickup}\n` +
                 `🏁 도착지: ${dropoff}\n` +
-                `👤 인원: ${passengers}\n` +
+                `🚐 희망차량: ${vehicle}\n` +
+                `👤 인원: ${passengers}명\n` +
                 `🧳 짐 갯수: ${luggage}개\n` +
                 `📞 연락처: ${contact}\n\n` +
-                `견적 및 예약 가능 여부 확인 부탁드립니다.`
+                `견적 및 예약 확인 부탁드립니다.`
             );
 
             window.location.href = `mailto:lovepost@naver.com?subject=${subject}&body=${body}`;
         }
 
-        // 상단 이동
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
