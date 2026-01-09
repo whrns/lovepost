@@ -1,321 +1,195 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)케이참신렌트카 | 프리미엄 공항 픽업 & 샌딩</title>
-    <meta name="description" content="인천공항 픽업, 샌딩, 의전 서비스 전문 케이참신렌트카입니다. 안전하고 편안한 이동을 약속합니다.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; position: relative;}
-        .font-inter { font-family: 'Inter', sans-serif; }
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        /* 구글 번역 위젯 숨기기 (커스텀 버튼만 노출) */
-        .goog-te-banner-frame.skiptranslate { display: none !important; } 
-        body { top: 0px !important; } 
-        #google_translate_element { display: none; }
-        
-        /* 애니메이션 */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fadeInUp 0.8s ease-out forwards; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-400 { animation-delay: 0.4s; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* 플래그 아이콘 스타일 */
-        .lang-btn img {
-            width: 28px;
-            height: 20px;
-            object-fit: cover;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-        .lang-btn:hover img { transform: scale(1.1); }
-    </style>
+<title>(주)케이참신렌트카 | 프리미엄 공항 픽업 & VIP 의전</title>
+<meta name="description" content="인천공항 픽업·샌딩·VIP 의전 전문 케이참신렌트카. 안전하고 품격 있는 프리미엄 이동 서비스.">
+
+<!-- SEO / OG -->
+<meta property="og:title" content="K-Chamshin RentCar | Premium Airport Transfer">
+<meta property="og:description" content="Incheon Airport Pickup · VIP Transfer · Business Service">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  scroll-behavior: smooth;
+  background:#0F172A;
+  color:#E5E7EB;
+}
+
+/* Google Translate 숨김 */
+.goog-te-banner-frame.skiptranslate { display:none!important; }
+body { top:0!important; }
+#google_translate_element { display:none; }
+
+.hero-bg {
+  background-image:
+    linear-gradient(rgba(10,15,30,.75), rgba(10,15,30,.75)),
+    url('https://images.unsplash.com/photo-1605559424843-9e4c2d51f93f');
+  background-size: cover;
+  background-position: center;
+}
+
+.lang-btn img {
+  width:28px; height:20px;
+  border-radius:4px;
+  cursor:pointer;
+  transition:.2s;
+}
+.lang-btn:hover img { transform:scale(1.1); }
+</style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-    <!-- 구글 번역 스크립트 -->
-    <div id="google_translate_element"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'ko', 
-                includedLanguages: 'ko,en,ja,zh-CN', 
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<body>
 
-    <!-- Header & Navigation -->
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-40 transition-all duration-300">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Brand -->
-            <a href="#" class="flex items-center gap-2 group">
-                <div class="bg-indigo-600 text-white p-2 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold text-gray-900 leading-none tracking-tight">(주)케이참신렌트카</span>
-                    <span class="text-xs text-indigo-600 font-medium tracking-wider">PREMIUM RENT-A-CAR</span>
-                </div>
-            </a>
+<!-- Google Translate -->
+<div id="google_translate_element"></div>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({
+    pageLanguage:'ko',
+    includedLanguages:'ko,en,ja,zh',
+    autoDisplay:false
+  },'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex space-x-6 items-center">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition">서비스 소개</a>
-                <a href="#process" class="text-gray-600 hover:text-indigo-600 font-medium transition">이용 안내</a>
-                <a href="#reservation" class="text-indigo-600 font-bold hover:text-indigo-800 transition">예약 문의</a>
-                
-                <!-- Language Flags -->
-                <div class="flex items-center gap-3 border-l pl-4 border-gray-300">
-                    <button onclick="changeLanguage('ko')" class="lang-btn" title="한국어">
-                        <img src="https://flagcdn.com/kr.svg" alt="Korean">
-                    </button>
-                    <button onclick="changeLanguage('en')" class="lang-btn" title="English">
-                        <img src="https://flagcdn.com/us.svg" alt="English">
-                    </button>
-                    <button onclick="changeLanguage('ja')" class="lang-btn" title="Japanese">
-                        <img src="https://flagcdn.com/jp.svg" alt="Japanese">
-                    </button>
-                    <button onclick="changeLanguage('zh-CN')" class="lang-btn" title="Chinese">
-                        <img src="https://flagcdn.com/cn.svg" alt="Chinese">
-                    </button>
-                </div>
-            </nav>
+<!-- HEADER -->
+<header class="fixed w-full bg-[#0F172A]/90 backdrop-blur z-50 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <span class="text-xl font-bold text-white">(주)케이참신렌트카</span>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-gray-600 hover:text-indigo-600">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t absolute w-full shadow-xl">
-            <div class="p-4 space-y-4">
-                <div class="flex justify-center gap-4 mb-4 pb-4 border-b">
-                    <button onclick="changeLanguage('ko')" class="lang-btn"><img src="https://flagcdn.com/kr.svg" alt="KR"></button>
-                    <button onclick="changeLanguage('en')" class="lang-btn"><img src="https://flagcdn.com/us.svg" alt="EN"></button>
-                    <button onclick="changeLanguage('ja')" class="lang-btn"><img src="https://flagcdn.com/jp.svg" alt="JP"></button>
-                    <button onclick="changeLanguage('zh-CN')" class="lang-btn"><img src="https://flagcdn.com/cn.svg" alt="CN"></button>
-                </div>
-                <a href="#about" class="block text-gray-700 font-medium hover:text-indigo-600">서비스 소개</a>
-                <a href="#reservation" class="block text-indigo-600 font-bold">예약 문의하기</a>
-            </div>
-        </div>
-    </header>
+    <nav class="hidden lg:flex gap-6 items-center">
+      <a href="#service" class="hover:text-[#C9A24D]">서비스</a>
+      <a href="#reservation" class="font-bold text-[#C9A24D]">예약 문의</a>
+      <div class="flex gap-3 border-l border-white/20 pl-4">
+        <button onclick="changeLanguage('ko')" class="lang-btn"><img src="https://flagcdn.com/kr.svg"></button>
+        <button onclick="changeLanguage('en')" class="lang-btn"><img src="https://flagcdn.com/us.svg"></button>
+        <button onclick="changeLanguage('ja')" class="lang-btn"><img src="https://flagcdn.com/jp.svg"></button>
+        <button onclick="changeLanguage('zh')" class="lang-btn"><img src="https://flagcdn.com/cn.svg"></button>
+      </div>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen min-h-[600px] flex items-center justify-center hero-bg">
-        <div class="absolute inset-0 bg-slate-900/60"></div>
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto text-white">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in">
-                글로벌 픽업 & 샌딩 서비스<br>
-                <span class="text-indigo-400">(주)케이참신렌트카</span>
-            </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-10 animate-fade-in delay-200">
-                Safe, Comfortable, and Premium Service for You.<br>
-                인천공항에서 목적지까지, 당신의 품격을 지켜드립니다.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in delay-400">
-                <a href="#reservation" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full text-lg font-bold transition shadow-lg">
-                    온라인 예약 문의
-                </a>
-                <a href="tel:01054904740" class="bg-white/10 hover:bg-white hover:text-indigo-900 border border-white text-white px-8 py-4 rounded-full text-lg font-bold transition backdrop-blur-sm">
-                    전화 상담 010-5490-4740
-                </a>
-            </div>
-        </div>
-    </section>
+    <button id="mobileBtn" class="lg:hidden">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
 
-    <!-- Services Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12 text-gray-900">제공 서비스</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 border rounded-xl hover:shadow-xl transition">
-                    <div class="text-4xl mb-4">✈️</div>
-                    <h3 class="text-xl font-bold mb-2">공항 픽업/샌딩</h3>
-                    <p class="text-gray-600">정확한 시간에 맞춰 공항과 목적지를 안전하게 연결합니다.</p>
-                </div>
-                <div class="p-6 border rounded-xl hover:shadow-xl transition">
-                    <div class="text-4xl mb-4">🏌️</div>
-                    <h3 class="text-xl font-bold mb-2">VIP/골프 의전</h3>
-                    <p class="text-gray-600">중요한 손님 영접 및 골프 투어를 위한 최고급 차량 지원.</p>
-                </div>
-                <div class="p-6 border rounded-xl hover:shadow-xl transition">
-                    <div class="text-4xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold mb-2">방역/안전 관리</h3>
-                    <p class="text-gray-600">철저한 차량 내부 소독과 베테랑 기사의 안전 운행.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reservation Form Section -->
-    <section id="reservation" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">예약 문의</h2>
-                <p class="text-gray-600">아래 양식을 작성해주시면 이메일 앱이 실행됩니다.<br>내용을 확인 후 전송 버튼을 눌러주세요.</p>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                <form id="bookingForm" onsubmit="sendEmail(event)" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- 출발 날짜 -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">출발 날짜</label>
-                            <input type="date" id="date" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                        <!-- 출발 시간 -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">출발 시간</label>
-                            <input type="time" id="time" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                        <!-- 출발지 -->
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">출발지 주소</label>
-                            <input type="text" id="pickup" placeholder="예: 인천공항 T1 또는 서울시 강남구..." required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                        <!-- 도착지 -->
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">도착지 주소</label>
-                            <input type="text" id="dropoff" placeholder="예: 호텔 이름 또는 상세 주소" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                        <!-- 탑승 인원 -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">탑승 인원 (명)</label>
-                            <input type="number" id="passengers" min="1" value="1" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                        <!-- 짐 갯수 -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">짐 갯수 (캐리어)</label>
-                            <input type="number" id="luggage" min="0" value="0" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                        <!-- 연락처 -->
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">연락처 (필수)</label>
-                            <input type="tel" id="contact" placeholder="010-0000-0000" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
-                        </div>
-                    </div>
-
-                    <div class="pt-4">
-                        <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg transform hover:-translate-y-1">
-                            이메일로 문의하기
-                        </button>
-                    </div>
-                    <p class="text-xs text-gray-400 text-center mt-4">* 버튼 클릭 시 메일 작성창이 자동으로 열립니다.</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h3 class="text-2xl text-white font-bold mb-2">(주)케이참신렌트카</h3>
-                    <p class="text-sm">인천광역시 중구 남북로 151 (남북동)<br>대표이사: 김세경 | 사업자등록번호: 361-85-03118</p>
-                </div>
-                <div class="md:text-right">
-                    <p class="text-lg text-white font-bold mb-1">고객센터</p>
-                    <a href="tel:01054904740" class="text-2xl text-indigo-400 font-bold block">010-5490-4740</a>
-                    <a href="mailto:lovepost@naver.com" class="text-gray-400 hover:text-white transition">lovepost@naver.com</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <!-- KakaoTalk Chat Button -->
-        <a href="http://pf.kakao.com/_sdUgn/chat" target="_blank" class="bg-[#FEE500] hover:bg-[#FADB00] text-[#3c1e1e] p-3 rounded-full shadow-lg transition transform hover:scale-110 flex items-center justify-center w-14 h-14" title="카카오톡 상담">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-                <path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.707 4.8 4.27 6.054-.188.702-.682 2.545-.78 2.94-.123.49.178.483.376.351.155-.103 2.466-1.675 3.464-2.353.54.08 1.1.123 1.67.123 4.97 0 9-3.186 9-7.115C21 6.185 16.97 3 12 3z"/>
-            </svg>
-        </a>
-
-        <!-- Scroll To Top Button -->
-        <button onclick="scrollToTop()" class="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition transform hover:scale-110 flex items-center justify-center w-14 h-14" title="상단으로 이동">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-        </button>
+  <div id="mobileMenu" class="hidden bg-[#0F172A] border-t border-white/10 lg:hidden">
+    <div class="p-4 space-y-4">
+      <a href="#service">서비스</a>
+      <a href="#reservation" class="text-[#C9A24D] font-bold">예약 문의</a>
     </div>
+  </div>
+</header>
 
-    <!-- JavaScript Logic -->
-    <script>
-        // 모바일 메뉴 토글
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+<!-- HERO -->
+<section class="hero-bg h-screen flex items-center justify-center text-center px-4">
+  <div>
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+      Premium Airport Transfer
+    </h1>
+    <p class="text-xl mb-8 text-gray-300">
+      Safe · Comfortable · Professional Service
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#reservation"
+         class="bg-[#C9A24D] text-[#0F172A] px-10 py-4 rounded-full font-bold shadow-xl">
+        예약 문의
+      </a>
+      <a href="tel:01054904740"
+         class="border border-[#C9A24D] px-10 py-4 rounded-full">
+        010-5490-4740
+      </a>
+    </div>
+  </div>
+</section>
 
-        // 언어 변경 함수 (Google Translate Trigger)
-        function changeLanguage(langCode) {
-            const select = document.querySelector('.goog-te-combo');
-            if (select) {
-                select.value = langCode;
-                select.dispatchEvent(new Event('change'));
-            } else {
-                alert("번역 도구를 로딩 중입니다. 잠시 후 다시 시도해주세요.");
-            }
-        }
+<!-- SERVICE -->
+<section id="service" class="py-24 bg-[#020617]">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-12">제공 서비스</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10">
+        ✈️ 공항 픽업 & 샌딩
+      </div>
+      <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10">
+        🏌️ VIP · 골프 의전
+      </div>
+      <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10">
+        🛡️ 안전 · 방역 관리
+      </div>
+    </div>
+  </div>
+</section>
 
-        // 이메일 전송 로직 (Mailto)
-        function sendEmail(e) {
-            e.preventDefault();
-            
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            const pickup = document.getElementById('pickup').value;
-            const dropoff = document.getElementById('dropoff').value;
-            const passengers = document.getElementById('passengers').value;
-            const luggage = document.getElementById('luggage').value;
-            const contact = document.getElementById('contact').value;
+<!-- RESERVATION -->
+<section id="reservation" class="py-24 bg-[#0F172A]">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">예약 문의</h2>
 
-            const subject = encodeURIComponent(`[(주)케이참신렌트카] 예약 문의 - ${contact}`);
-            const body = encodeURIComponent(
-                `안녕하세요, 예약 문의 드립니다.\n\n` +
-                `1. 출발 날짜: ${date}\n` +
-                `2. 출발 시간: ${time}\n` +
-                `3. 출발지: ${pickup}\n` +
-                `4. 도착지: ${dropoff}\n` +
-                `5. 탑승 인원: ${passengers}명\n` +
-                `6. 짐 갯수: ${luggage}개\n` +
-                `7. 연락처: ${contact}\n\n` +
-                `확인 부탁드립니다.`
-            );
+    <form onsubmit="sendEmail(event)"
+          class="bg-[#020617] p-8 rounded-2xl space-y-4 border border-white/10">
 
-            // 네이버 메일 등 기본 메일 앱 호출
-            window.location.href = `mailto:lovepost@naver.com?subject=${subject}&body=${body}`;
-        }
+      <input type="date" id="date" required class="w-full bg-transparent border p-3 rounded">
+      <input type="time" id="time" required class="w-full bg-transparent border p-3 rounded">
+      <input type="text" id="pickup" placeholder="출발지" required class="w-full bg-transparent border p-3 rounded">
+      <input type="text" id="dropoff" placeholder="도착지" required class="w-full bg-transparent border p-3 rounded">
+      <input type="tel" id="contact" placeholder="010-0000-0000"
+             pattern="[0-9\-]+" inputmode="tel" required
+             class="w-full bg-transparent border p-3 rounded">
 
-        // 상단 이동 함수
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+      <button class="w-full bg-[#C9A24D] text-[#0F172A] py-4 rounded font-bold">
+        이메일로 문의하기
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black py-10 text-center text-gray-400">
+  <p class="text-white font-bold">(주)케이참신렌트카</p>
+  <p>010-5490-4740 · lovepost@naver.com</p>
+</footer>
+
+<!-- FLOAT BUTTON -->
+<a href="http://pf.kakao.com/_sdUgn/chat" target="_blank"
+   class="fixed bottom-6 right-6 bg-[#FEE500] w-14 h-14 rounded-full flex items-center justify-center shadow-xl">
+  💬
+</a>
+
+<script>
+document.getElementById('mobileBtn').onclick=()=>{
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+};
+
+function changeLanguage(code){
+  const s=document.querySelector('.goog-te-combo');
+  if(s){ s.value=code; s.dispatchEvent(new Event('change')); }
+}
+
+function sendEmail(e){
+  e.preventDefault();
+  const body=encodeURIComponent(
+    `출발:${date.value}\n시간:${time.value}\n출발지:${pickup.value}\n도착지:${dropoff.value}\n연락처:${contact.value}`
+  );
+  location.href=`mailto:lovepost@naver.com?subject=예약문의&body=${body}`;
+}
+</script>
+
 </body>
 </html>
