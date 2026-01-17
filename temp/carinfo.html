@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>차량 안내</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /* 스와이퍼 페이지네이션 색상 커스텀 */
+        .swiper-pagination-bullet-active {
+            background-color: #333 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <main class="container mx-auto px-4 py-16">
+        
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">차량 안내</h1>
+            <p class="text-gray-600">고객님의 편안한 여행을 책임질 다양한 차량을 확인해보세요.</p>
+        </div>
+
+        <div class="swiper mySwiper w-full max-w-screen-xl mx-auto mb-7.5 text-center md:!pb-12">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center"> <img src="https://kcsrentcar.com/theme/basic/img/contents/carnival_4.jpg" alt="카니발 4세대" class="w-full h-full object-contain rounded-lg" loading="lazy" decoding="async">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">카니발 4세대</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">7인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">5인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center">
+                            <img src="https://kcsrentcar.com/theme/basic/img/contents/carnival_limousine.jpg" alt="카니발 하이리무진" class="w-full h-full object-contain rounded-lg" loading="lazy" decoding="async">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">카니발 하이리무진</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">7인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">4인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center">
+                            <img src="https://kcsrentcar.com/theme/basic/img/contents/staria.jpg" alt="스타리아" class="w-full h-full object-contain rounded-lg" loading="lazy" decoding="async">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">스타리아</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">9인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">6인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center">
+                            <img src="https://kcsrentcar.com/theme/basic/img/contents/staria_limousine.png" alt="스타리아 리무진" class="w-full h-full object-contain rounded-lg" loading="lazy" decoding="async">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">스타리아 리무진</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">9인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">6인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center">
+                            <img src="https://kcsrentcar.com/theme/basic/img/contents/solati.png" alt="솔라티" class="w-full h-full object-contain rounded-lg" loading="lazy" decoding="async">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">솔라티</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">15인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">12인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center">
+                            <img src="https://kcsrentcar.com/theme/basic/img/contents/benz_sprinter.png" alt="벤츠 스프린터" class="w-full h-full object-contain rounded-lg">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">벤츠 스프린터</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">10인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">8인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide px-4">
+                    <article class="flex flex-col gap-8 h-full bg-white p-4 pb-12 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-center h-48 items-center">
+                            <img src="https://kcsrentcar.com/theme/basic/img/contents/genesis_g90.jpeg" alt="제네시스 G90" class="w-full h-full object-contain rounded-lg">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-auto">
+                            <h3 class="font-semibold text-xl">제네시스 G90</h3>
+                            <dl class="flex w-full border-y border-gray-400 text-sm">
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">인승</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">5인승</dd>
+                                </div>
+                                <div class="flex w-1/2">
+                                    <dt class="flex justify-center items-center w-1/2 py-2 bg-gray-100 font-medium">최대인원</dt>
+                                    <dd class="flex justify-center items-center w-1/2 py-2">4인</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+            
+            <div class="swiper-button-next !hidden !right-0 !w-auto !text-gray-400 after:!hidden md:!flex hover:!text-gray-800 transition-colors">
+                <span class="flex justify-center items-center !w-10 !h-10 bg-white border border-gray-300 rounded-full shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!w-5 !h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </span>
+            </div>
+            <div class="swiper-button-prev !hidden !left-0 !w-auto !text-gray-400 after:!hidden md:!flex hover:!text-gray-800 transition-colors">
+                <span class="flex justify-center items-center !w-10 !h-10 bg-white border border-gray-300 rounded-full shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!w-5 !h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </span>
+            </div>
+            <div class="swiper-pagination !bottom-0"></div>
+        </div>
+        </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper(".mySwiper", {
+                loop: true,
+                // autoplay: {
+                //   delay: 5000,
+                //   disableOnInteraction: false,
+                // },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+                breakpoints: {
+                    // 모바일에서는 1개
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    // 768px 이상에서는 3개
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20, 
+                    }
+                },
+            });
+        });
+    </script>
+</body>
+</html>
